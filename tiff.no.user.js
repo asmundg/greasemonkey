@@ -14,7 +14,6 @@ function imdbRate(movieEl) {
         onload: (response) => {
           let data = JSON.parse(response.responseText);
           let rating = data.imdbRating
-          console.log(rating)
           if (!isNaN(parseFloat(rating))) {
             addRating(movieEl, rating);
           }
